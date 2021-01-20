@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seção</title>
+</head>
+<body>
+  <h1>Aula 12 - Escopo de variaveis </h1>
+  
+
+  <script>
+   // Escopo de variaveis
+   function somar(num1, num2){
+     //variavel declarada dentro da função só funciona nela.
+      var valor = 5 //varialve local
+     return valor + num1 + num2
+   }
+   console.log(somar(4,6))
+   //console.log(valor) referenceError
+
+   for(var i = 0; i < 5; i++) {
+     var outra = 5 // varialvel global
+     console.log(i * outra)
+   }
+
+   console.log(outra) // Temos acesso, pois foi declarada fora de uma função.
+
+   console.log(i)
+
+   for(var j = 0; j < 5; j++) {
+     let uma = 12 // variavel local
+     console.log(j * uma)
+   }
+   //console.log(uma) referenceError
+   console.log(j)
+    
+  </script>
+</body>
+</html>
